@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Name</title>
+  <style>
+    #name {
+      font-size: 20px;
+      color: blue;
+      text-align: center;
+    }
+    #toggleButton{
+        text-align: center;
+        padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    body{
+        margin: 0;
+      display: flex;
+      justify-content: center; 
+      align-items: center;    
+      height: 100vh;          
+      background-color: #f4f4f4; 
+    }
+  </style>
+</head>
+<body>
+  
+  <button id="toggleButton">My Name</button>
+  
+  
+  <p id="name" style="display: none;">Ashimwe Belyse</p>
+
+  <script>
+    
+    const button = document.getElementById('toggleButton');
+    const nameElement = document.getElementById('name');
+
+    
+    button.addEventListener('click', () => {
+      
+      if (nameElement.style.display === 'none') {
+        nameElement.style.display = 'block';
+      } else {
+        nameElement.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
